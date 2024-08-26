@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2024.08.19.17:28:03
+# ACDS 18.1 625 win32 2024.08.20.03:48:53
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2024.08.19.17:28:03
+# ACDS 18.1 625 win32 2024.08.20.03:48:53
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AlarmClock"
@@ -169,6 +169,7 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
+mkdir -p ./libraries/pio_2/
 mkdir -p ./libraries/pio_1/
 mkdir -p ./libraries/pio_0/
 mkdir -p ./libraries/memory/
@@ -250,6 +251,7 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                       -work rst_controller                       
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/AlarmClock_irq_mapper.sv"                                          -work irq_mapper                           
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/AlarmClock_mm_interconnect_0.v"                                    -work mm_interconnect_0                    
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/AlarmClock_pio_2.v"                                                -work pio_2                                
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/AlarmClock_pio_1.v"                                                -work pio_1                                
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/AlarmClock_pio_0.v"                                                -work pio_0                                
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/AlarmClock_memory.v"                                               -work memory                               

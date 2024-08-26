@@ -30,6 +30,7 @@ set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::qu
 set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/AlarmClock_pio_2.v"]
 set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/AlarmClock_pio_1.v"]
 set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/AlarmClock_pio_0.v"]
 set_global_assignment -library "lib_AlarmClock" -name MISC_FILE [file join $::quartus(sip_path) "submodules/AlarmClock_memory.hex"]

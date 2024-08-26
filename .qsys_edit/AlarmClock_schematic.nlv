@@ -8,16 +8,18 @@ preplace inst AlarmClock.pio_1 -pg 1 -lvl 3 -y 410
 preplace inst AlarmClock.memory -pg 1 -lvl 3 -y 230
 preplace inst AlarmClock.cpu.cpu -pg 1
 preplace inst AlarmClock.Timer -pg 1 -lvl 3 -y 130
+preplace inst AlarmClock.pio_2 -pg 1 -lvl 3 -y 530
 preplace inst AlarmClock.cpu.reset_bridge -pg 1
 preplace inst AlarmClock.clk_0 -pg 1 -lvl 1 -y 120
 preplace inst AlarmClock.cpu -pg 1 -lvl 2 -y 100
+preplace netloc EXPORT<net_container>AlarmClock</net_container>(SLAVE)AlarmClock.switches,(SLAVE)pio_2.external_connection) 1 0 3 NJ 560 NJ 560 NJ
+preplace netloc FAN_OUT<net_container>AlarmClock</net_container>(SLAVE)pio_2.clk,(MASTER)clk_0.clk,(SLAVE)Timer.clk,(SLAVE)memory.clk1,(SLAVE)jtag.clk,(SLAVE)cpu.clk,(SLAVE)pio_0.clk,(SLAVE)pio_1.clk) 1 1 2 290 460 690
 preplace netloc EXPORT<net_container>AlarmClock</net_container>(SLAVE)clk_0.clk_in,(SLAVE)AlarmClock.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>AlarmClock</net_container>(SLAVE)pio_1.external_connection,(SLAVE)AlarmClock.inputs) 1 0 3 NJ 440 NJ 440 NJ
-preplace netloc INTERCONNECT<net_container>AlarmClock</net_container>(MASTER)cpu.data_master,(SLAVE)jtag.avalon_jtag_slave,(SLAVE)cpu.debug_mem_slave,(SLAVE)memory.s1,(SLAVE)Timer.s1,(MASTER)cpu.instruction_master,(SLAVE)pio_1.s1,(SLAVE)pio_0.s1) 1 1 2 300 480 660
-preplace netloc FAN_OUT<net_container>AlarmClock</net_container>(SLAVE)pio_0.reset,(SLAVE)cpu.reset,(SLAVE)Timer.reset,(SLAVE)memory.reset1,(SLAVE)pio_1.reset,(SLAVE)jtag.reset,(MASTER)clk_0.clk_reset) 1 1 2 260 460 720
-preplace netloc FAN_OUT<net_container>AlarmClock</net_container>(SLAVE)jtag.irq,(MASTER)cpu.irq,(SLAVE)Timer.irq) 1 2 1 680
+preplace netloc FAN_OUT<net_container>AlarmClock</net_container>(MASTER)clk_0.clk_reset,(SLAVE)cpu.reset,(SLAVE)pio_0.reset,(SLAVE)pio_1.reset,(SLAVE)pio_2.reset,(SLAVE)memory.reset1,(SLAVE)jtag.reset,(SLAVE)Timer.reset) 1 1 2 270 580 730
+preplace netloc INTERCONNECT<net_container>AlarmClock</net_container>(SLAVE)memory.s1,(SLAVE)Timer.s1,(MASTER)cpu.instruction_master,(SLAVE)pio_2.s1,(SLAVE)cpu.debug_mem_slave,(SLAVE)pio_1.s1,(SLAVE)jtag.avalon_jtag_slave,(MASTER)cpu.data_master,(SLAVE)pio_0.s1) 1 1 2 310 600 670
 preplace netloc EXPORT<net_container>AlarmClock</net_container>(SLAVE)pio_0.external_connection,(SLAVE)AlarmClock.leds) 1 0 3 NJ 340 NJ 340 NJ
 preplace netloc EXPORT<net_container>AlarmClock</net_container>(SLAVE)AlarmClock.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>AlarmClock</net_container>(SLAVE)cpu.clk,(SLAVE)pio_0.clk,(SLAVE)memory.clk1,(SLAVE)pio_1.clk,(MASTER)clk_0.clk,(SLAVE)Timer.clk,(SLAVE)jtag.clk) 1 1 2 280 360 700
-levelinfo -pg 1 0 50 930
-levelinfo -hier AlarmClock 60 90 420 770 920
+preplace netloc EXPORT<net_container>AlarmClock</net_container>(SLAVE)pio_1.external_connection,(SLAVE)AlarmClock.buttons) 1 0 3 NJ 440 NJ 440 NJ
+preplace netloc FAN_OUT<net_container>AlarmClock</net_container>(SLAVE)pio_1.irq,(SLAVE)jtag.irq,(SLAVE)pio_2.irq,(SLAVE)Timer.irq,(MASTER)cpu.irq) 1 2 1 710
+levelinfo -pg 1 0 60 940
+levelinfo -hier AlarmClock 70 100 430 780 930

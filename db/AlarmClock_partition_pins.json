@@ -136,35 +136,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputs[0]",
+					"name" : "switches[0]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[1]",
+					"name" : "buttons[0]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[2]",
+					"name" : "switches[1]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[3]",
+					"name" : "buttons[1]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[4]",
+					"name" : "switches[2]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[5]",
+					"name" : "buttons[2]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[6]",
+					"name" : "switches[3]",
 					"strict" : false
 				},
 				{
-					"name" : "inputs[7]",
+					"name" : "buttons[3]",
 					"strict" : false
 				},
 				{

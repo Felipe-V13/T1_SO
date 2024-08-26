@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>19/08/2024 05:35:27 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1724110527950</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\User\Documents\SO_T1\software\MyAlarmClock_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>20/08/2024 04:17:29 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1724149049432</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\software\MyAlarmClock_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\AlarmClock.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -911,20 +911,26 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_1</slaveDescriptor>
+                <slaveDescriptor>pio_2</slaveDescriptor>
                 <addressRange>0x00021020 - 0x0002102F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_0</slaveDescriptor>
+                <slaveDescriptor>pio_1</slaveDescriptor>
                 <addressRange>0x00021030 - 0x0002103F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>pio_0</slaveDescriptor>
+                <addressRange>0x00021040 - 0x0002104F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag</slaveDescriptor>
-                <addressRange>0x00021040 - 0x00021047</addressRange>
+                <addressRange>0x00021050 - 0x00021057</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

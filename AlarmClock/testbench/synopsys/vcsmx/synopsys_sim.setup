@@ -25,6 +25,7 @@ cpu:                                   ./libraries/cpu/
 rst_controller:                        ./libraries/rst_controller/                       
 irq_mapper:                            ./libraries/irq_mapper/                           
 mm_interconnect_0:                     ./libraries/mm_interconnect_0/                    
+pio_2:                                 ./libraries/pio_2/                                
 pio_1:                                 ./libraries/pio_1/                                
 pio_0:                                 ./libraries/pio_0/                                
 memory:                                ./libraries/memory/                               
@@ -32,8 +33,8 @@ jtag:                                  ./libraries/jtag/
 Timer:                                 ./libraries/Timer/                                
 AlarmClock_inst_reset_bfm:             ./libraries/AlarmClock_inst_reset_bfm/            
 AlarmClock_inst_leds_bfm:              ./libraries/AlarmClock_inst_leds_bfm/             
-AlarmClock_inst_inputs_bfm:            ./libraries/AlarmClock_inst_inputs_bfm/           
 AlarmClock_inst_clk_bfm:               ./libraries/AlarmClock_inst_clk_bfm/              
+AlarmClock_inst_buttons_bfm:           ./libraries/AlarmClock_inst_buttons_bfm/          
 AlarmClock_inst:                       ./libraries/AlarmClock_inst/                      
 altera_ver:                            ./libraries/altera_ver/                           
 lpm_ver:                               ./libraries/lpm_ver/                              

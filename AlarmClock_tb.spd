@@ -182,6 +182,10 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
+   path="AlarmClock/testbench/AlarmClock_tb/simulation/submodules/AlarmClock_pio_2.v"
+   type="VERILOG"
+   library="pio_2" />
+ <file
    path="AlarmClock/testbench/AlarmClock_tb/simulation/submodules/AlarmClock_pio_1.v"
    type="VERILOG"
    library="pio_1" />
@@ -218,13 +222,13 @@
    type="SYSTEM_VERILOG"
    library="AlarmClock_inst_leds_bfm" />
  <file
-   path="AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_conduit_bfm.sv"
-   type="SYSTEM_VERILOG"
-   library="AlarmClock_inst_inputs_bfm" />
- <file
    path="AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_avalon_clock_source.sv"
    type="SYSTEM_VERILOG"
    library="AlarmClock_inst_clk_bfm" />
+ <file
+   path="AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_conduit_bfm.sv"
+   type="SYSTEM_VERILOG"
+   library="AlarmClock_inst_buttons_bfm" />
  <file
    path="AlarmClock/testbench/AlarmClock_tb/simulation/submodules/AlarmClock.v"
    type="VERILOG"

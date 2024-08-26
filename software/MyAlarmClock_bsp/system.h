@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'AlarmClock'
  * SOPC Builder design path: ../../AlarmClock.sopcinfo
  *
- * Generated: Mon Aug 19 17:35:28 CST 2024
+ * Generated: Tue Aug 20 04:17:31 CST 2024
  */
 
 /*
@@ -156,19 +156,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag"
-#define ALT_STDERR_BASE 0x21040
+#define ALT_STDERR_BASE 0x21050
 #define ALT_STDERR_DEV jtag
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag"
-#define ALT_STDIN_BASE 0x21040
+#define ALT_STDIN_BASE 0x21050
 #define ALT_STDIN_DEV jtag
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag"
-#define ALT_STDOUT_BASE 0x21040
+#define ALT_STDOUT_BASE 0x21050
 #define ALT_STDOUT_DEV jtag
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -187,7 +187,7 @@
 #define TIMER_COUNTER_SIZE 32
 #define TIMER_FIXED_PERIOD 0
 #define TIMER_FREQ 50000000
-#define TIMER_IRQ 0
+#define TIMER_IRQ 2
 #define TIMER_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define TIMER_LOAD_VALUE 49999999
 #define TIMER_MULT 1.0
@@ -219,8 +219,8 @@
  */
 
 #define ALT_MODULE_CLASS_jtag altera_avalon_jtag_uart
-#define JTAG_BASE 0x21040
-#define JTAG_IRQ 1
+#define JTAG_BASE 0x21050
+#define JTAG_IRQ 3
 #define JTAG_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_NAME "/dev/jtag"
 #define JTAG_READ_DEPTH 64
@@ -266,7 +266,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_0 altera_avalon_pio
-#define PIO_0_BASE 0x21030
+#define PIO_0_BASE 0x21040
 #define PIO_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_0_CAPTURE 0
@@ -293,24 +293,51 @@
  */
 
 #define ALT_MODULE_CLASS_pio_1 altera_avalon_pio
-#define PIO_1_BASE 0x21020
+#define PIO_1_BASE 0x21030
 #define PIO_1_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_1_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_1_CAPTURE 0
-#define PIO_1_DATA_WIDTH 8
+#define PIO_1_CAPTURE 1
+#define PIO_1_DATA_WIDTH 4
 #define PIO_1_DO_TEST_BENCH_WIRING 0
 #define PIO_1_DRIVEN_SIM_VALUE 0
-#define PIO_1_EDGE_TYPE "NONE"
+#define PIO_1_EDGE_TYPE "FALLING"
 #define PIO_1_FREQ 50000000
 #define PIO_1_HAS_IN 1
 #define PIO_1_HAS_OUT 0
 #define PIO_1_HAS_TRI 0
-#define PIO_1_IRQ -1
-#define PIO_1_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_1_IRQ_TYPE "NONE"
+#define PIO_1_IRQ 1
+#define PIO_1_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PIO_1_IRQ_TYPE "EDGE"
 #define PIO_1_NAME "/dev/pio_1"
 #define PIO_1_RESET_VALUE 0
 #define PIO_1_SPAN 16
 #define PIO_1_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_2 altera_avalon_pio
+#define PIO_2_BASE 0x21020
+#define PIO_2_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_2_CAPTURE 1
+#define PIO_2_DATA_WIDTH 4
+#define PIO_2_DO_TEST_BENCH_WIRING 0
+#define PIO_2_DRIVEN_SIM_VALUE 0
+#define PIO_2_EDGE_TYPE "ANY"
+#define PIO_2_FREQ 50000000
+#define PIO_2_HAS_IN 1
+#define PIO_2_HAS_OUT 0
+#define PIO_2_HAS_TRI 0
+#define PIO_2_IRQ 0
+#define PIO_2_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PIO_2_IRQ_TYPE "EDGE"
+#define PIO_2_NAME "/dev/pio_2"
+#define PIO_2_RESET_VALUE 0
+#define PIO_2_SPAN 16
+#define PIO_2_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

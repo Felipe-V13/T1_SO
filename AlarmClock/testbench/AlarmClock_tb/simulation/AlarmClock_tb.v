@@ -6,16 +6,22 @@
 module AlarmClock_tb (
 	);
 
-	wire         alarmclock_inst_clk_bfm_clk_clk;           // AlarmClock_inst_clk_bfm:clk -> [AlarmClock_inst:clk_clk, AlarmClock_inst_reset_bfm:clk]
-	wire   [7:0] alarmclock_inst_inputs_bfm_conduit_export; // AlarmClock_inst_inputs_bfm:sig_export -> AlarmClock_inst:inputs_export
-	wire  [31:0] alarmclock_inst_leds_export;               // AlarmClock_inst:leds_export -> AlarmClock_inst_leds_bfm:sig_export
-	wire         alarmclock_inst_reset_bfm_reset_reset;     // AlarmClock_inst_reset_bfm:reset -> AlarmClock_inst:reset_reset_n
+	wire         alarmclock_inst_clk_bfm_clk_clk;             // AlarmClock_inst_clk_bfm:clk -> [AlarmClock_inst:clk_clk, AlarmClock_inst_reset_bfm:clk]
+	wire   [3:0] alarmclock_inst_buttons_bfm_conduit_export;  // AlarmClock_inst_buttons_bfm:sig_export -> AlarmClock_inst:buttons_export
+	wire  [31:0] alarmclock_inst_leds_export;                 // AlarmClock_inst:leds_export -> AlarmClock_inst_leds_bfm:sig_export
+	wire   [3:0] alarmclock_inst_switches_bfm_conduit_export; // AlarmClock_inst_switches_bfm:sig_export -> AlarmClock_inst:switches_export
+	wire         alarmclock_inst_reset_bfm_reset_reset;       // AlarmClock_inst_reset_bfm:reset -> AlarmClock_inst:reset_reset_n
 
 	AlarmClock alarmclock_inst (
-		.clk_clk       (alarmclock_inst_clk_bfm_clk_clk),           //    clk.clk
-		.inputs_export (alarmclock_inst_inputs_bfm_conduit_export), // inputs.export
-		.leds_export   (alarmclock_inst_leds_export),               //   leds.export
-		.reset_reset_n (alarmclock_inst_reset_bfm_reset_reset)      //  reset.reset_n
+		.buttons_export  (alarmclock_inst_buttons_bfm_conduit_export),  //  buttons.export
+		.clk_clk         (alarmclock_inst_clk_bfm_clk_clk),             //      clk.clk
+		.leds_export     (alarmclock_inst_leds_export),                 //     leds.export
+		.reset_reset_n   (alarmclock_inst_reset_bfm_reset_reset),       //    reset.reset_n
+		.switches_export (alarmclock_inst_switches_bfm_conduit_export)  // switches.export
+	);
+
+	altera_conduit_bfm alarmclock_inst_buttons_bfm (
+		.sig_export (alarmclock_inst_buttons_bfm_conduit_export)  // conduit.export
 	);
 
 	altera_avalon_clock_source #(
@@ -23,10 +29,6 @@ module AlarmClock_tb (
 		.CLOCK_UNIT (1)
 	) alarmclock_inst_clk_bfm (
 		.clk (alarmclock_inst_clk_bfm_clk_clk)  // clk.clk
-	);
-
-	altera_conduit_bfm alarmclock_inst_inputs_bfm (
-		.sig_export (alarmclock_inst_inputs_bfm_conduit_export)  // conduit.export
 	);
 
 	altera_conduit_bfm_0002 alarmclock_inst_leds_bfm (
@@ -39,6 +41,10 @@ module AlarmClock_tb (
 	) alarmclock_inst_reset_bfm (
 		.reset (alarmclock_inst_reset_bfm_reset_reset), // reset.reset_n
 		.clk   (alarmclock_inst_clk_bfm_clk_clk)        //   clk.clk
+	);
+
+	altera_conduit_bfm alarmclock_inst_switches_bfm (
+		.sig_export (alarmclock_inst_switches_bfm_conduit_export)  // conduit.export
 	);
 
 endmodule

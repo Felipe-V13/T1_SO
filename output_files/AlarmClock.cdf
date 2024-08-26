@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/User/Documents/SO_T1/output_files/") File("AlarmClock.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/output_files/") File("AlarmClock.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

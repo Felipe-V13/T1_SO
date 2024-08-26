@@ -1,7 +1,7 @@
 Info: Starting: Create testbench Platform Designer system
-Info: C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock.ipx
-Info: qsys-generate C:\Users\User\Documents\SO_T1\AlarmClock.qsys --testbench=STANDARD --output-directory=C:\Users\User\Documents\SO_T1 --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading SO_T1/AlarmClock.qsys
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock.ipx
+Info: qsys-generate C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock.qsys --testbench=STANDARD --output-directory=C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading T1_SO/AlarmClock.qsys
 Progress: Reading input file
 Progress: Adding Timer [altera_avalon_timer 18.1]
 Progress: Parameterizing module Timer
@@ -17,12 +17,15 @@ Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
 Progress: Adding pio_1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_1
+Progress: Adding pio_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_2
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: AlarmClock.jtag: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: AlarmClock.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: AlarmClock.pio_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: qsys-generate succeeded.
 Info: Loading IP catalog for testbench.
 Progress: 
@@ -32,35 +35,35 @@ Progress: (2) searching C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_com
 Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx
 Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
 Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
-Info: C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ip/**/* matched 0 files in 0.00 seconds
-Info: Reading index C:\Users\User\Documents\SO_T1\AlarmClock\testbench\AlarmClock.ipx
-Progress: Loading SO_T1/AlarmClock.qsys
-Info: C:/Users/User/Documents/SO_T1/* matched 14 files in 0.00 seconds
-Info: C:/Users/User/Documents/SO_T1/ip/**/* matched 0 files in 0.00 seconds
-Info: C:/Users/User/Documents/SO_T1/*/* matched 330 files in 0.01 seconds
-Info: C:\Users\User\Documents\SO_T1\AlarmClock\testbench\AlarmClock.ipx described 0 plugins, 3 paths, in 0.02 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock\testbench\AlarmClock.ipx
+Progress: Loading T1_SO/AlarmClock.qsys
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/* matched 15 files in 0.00 seconds
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/ip/**/* matched 0 files in 0.00 seconds
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/*/* matched 344 files in 0.03 seconds
+Info: C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock\testbench\AlarmClock.ipx described 0 plugins, 3 paths, in 0.03 seconds
 Progress: Loading testbench/AlarmClock_tb.qsys
-Info: C:/Users/User/Documents/SO_T1/AlarmClock/testbench/* matched 12 files in 0.02 seconds
-Info: C:/Users/User/Documents/SO_T1/AlarmClock/testbench/*/* matched 9 files in 0.00 seconds
-Info: C:/Users/User/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/* matched 12 files in 0.03 seconds
+Info: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/*/* matched 9 files in 0.00 seconds
+Info: C:/Users/Lenovo/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.09 seconds
-Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.10 seconds
+Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.21 seconds
+Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.22 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.00 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx
-Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
-Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.02 seconds
+Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.02 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.13 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.13 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.30 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.30 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -72,28 +75,32 @@ Info: send_message Info TB_Gen: System design is: AlarmClock
 Info: TB_Gen: System design is: AlarmClock
 Info: get_interfaces 
 Info: get_connections 
+Info: get_interface_property buttons EXPORT_OF
+Info: get_instance_property pio_1 CLASS_NAME
+Info: get_instance_assignment pio_1 testbench.partner.map.external_connection
 Info: get_interface_property clk EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
-Info: get_interface_property inputs EXPORT_OF
-Info: get_instance_property pio_1 CLASS_NAME
-Info: get_instance_assignment pio_1 testbench.partner.map.external_connection
 Info: get_interface_property leds EXPORT_OF
 Info: get_instance_property pio_0 CLASS_NAME
 Info: get_instance_assignment pio_0 testbench.partner.map.external_connection
 Info: get_interface_property reset EXPORT_OF
 Info: get_instance_property clk_0 CLASS_NAME
 Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: get_interface_property switches EXPORT_OF
+Info: get_instance_property pio_2 CLASS_NAME
+Info: get_instance_assignment pio_2 testbench.partner.map.external_connection
 Info: send_message Info TB_Gen: Creating testbench system : AlarmClock_tb with all standard BFMs
 Info: TB_Gen: Creating testbench system : AlarmClock_tb with all standard BFMs
 Info: create_system AlarmClock_tb
 Info: add_instance AlarmClock_inst AlarmClock 
 Info: set_use_testbench_naming_pattern true AlarmClock
 Info: get_instance_interfaces AlarmClock_inst
+Info: get_instance_interface_property AlarmClock_inst buttons CLASS_NAME
 Info: get_instance_interface_property AlarmClock_inst clk CLASS_NAME
-Info: get_instance_interface_property AlarmClock_inst inputs CLASS_NAME
 Info: get_instance_interface_property AlarmClock_inst leds CLASS_NAME
 Info: get_instance_interface_property AlarmClock_inst reset CLASS_NAME
+Info: get_instance_interface_property AlarmClock_inst switches CLASS_NAME
 Info: get_instance_interface_property AlarmClock_inst clk CLASS_NAME
 Info: send_message Info TB_Gen: clock_sink found: clk
 Info: TB_Gen: clock_sink found: clk
@@ -135,28 +142,28 @@ Info: get_instance_interfaces AlarmClock_inst_reset_bfm
 Info: get_instance_interface_property AlarmClock_inst_reset_bfm clk CLASS_NAME
 Info: get_instance_interface_property AlarmClock_inst_reset_bfm reset CLASS_NAME
 Info: add_connection AlarmClock_inst_reset_bfm.reset AlarmClock_inst.reset
-Info: get_instance_interface_property AlarmClock_inst inputs CLASS_NAME
-Info: send_message Info TB_Gen: conduit_end found: inputs
-Info: TB_Gen: conduit_end found: inputs
-Info: get_instance_interface_property AlarmClock_inst inputs CLASS_NAME
-Info: add_instance AlarmClock_inst_inputs_bfm altera_conduit_bfm 
-Info: get_instance_property AlarmClock_inst_inputs_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value AlarmClock_inst inputs associatedClock
-Info: get_instance_interface_parameter_value AlarmClock_inst inputs associatedReset
-Info: get_instance_interface_ports AlarmClock_inst inputs
-Info: get_instance_interface_port_property AlarmClock_inst inputs inputs_export ROLE
-Info: get_instance_interface_port_property AlarmClock_inst inputs inputs_export WIDTH
-Info: get_instance_interface_port_property AlarmClock_inst inputs inputs_export DIRECTION
-Info: set_instance_parameter_value AlarmClock_inst_inputs_bfm CLOCKED_SIGNAL 0
-Info: set_instance_parameter_value AlarmClock_inst_inputs_bfm ENABLE_RESET 0
-Info: set_instance_parameter_value AlarmClock_inst_inputs_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value AlarmClock_inst_inputs_bfm SIGNAL_WIDTHS 8
-Info: set_instance_parameter_value AlarmClock_inst_inputs_bfm SIGNAL_DIRECTIONS output
-Info: get_instance_property AlarmClock_inst_inputs_bfm CLASS_NAME
-Info: get_instance_interface_property AlarmClock_inst inputs CLASS_NAME
-Info: get_instance_interfaces AlarmClock_inst_inputs_bfm
-Info: get_instance_interface_property AlarmClock_inst_inputs_bfm conduit CLASS_NAME
-Info: add_connection AlarmClock_inst_inputs_bfm.conduit AlarmClock_inst.inputs
+Info: get_instance_interface_property AlarmClock_inst buttons CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: buttons
+Info: TB_Gen: conduit_end found: buttons
+Info: get_instance_interface_property AlarmClock_inst buttons CLASS_NAME
+Info: add_instance AlarmClock_inst_buttons_bfm altera_conduit_bfm 
+Info: get_instance_property AlarmClock_inst_buttons_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AlarmClock_inst buttons associatedClock
+Info: get_instance_interface_parameter_value AlarmClock_inst buttons associatedReset
+Info: get_instance_interface_ports AlarmClock_inst buttons
+Info: get_instance_interface_port_property AlarmClock_inst buttons buttons_export ROLE
+Info: get_instance_interface_port_property AlarmClock_inst buttons buttons_export WIDTH
+Info: get_instance_interface_port_property AlarmClock_inst buttons buttons_export DIRECTION
+Info: set_instance_parameter_value AlarmClock_inst_buttons_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value AlarmClock_inst_buttons_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value AlarmClock_inst_buttons_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value AlarmClock_inst_buttons_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value AlarmClock_inst_buttons_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property AlarmClock_inst_buttons_bfm CLASS_NAME
+Info: get_instance_interface_property AlarmClock_inst buttons CLASS_NAME
+Info: get_instance_interfaces AlarmClock_inst_buttons_bfm
+Info: get_instance_interface_property AlarmClock_inst_buttons_bfm conduit CLASS_NAME
+Info: add_connection AlarmClock_inst_buttons_bfm.conduit AlarmClock_inst.buttons
 Info: get_instance_interface_property AlarmClock_inst leds CLASS_NAME
 Info: send_message Info TB_Gen: conduit_end found: leds
 Info: TB_Gen: conduit_end found: leds
@@ -179,32 +186,57 @@ Info: get_instance_interface_property AlarmClock_inst leds CLASS_NAME
 Info: get_instance_interfaces AlarmClock_inst_leds_bfm
 Info: get_instance_interface_property AlarmClock_inst_leds_bfm conduit CLASS_NAME
 Info: add_connection AlarmClock_inst_leds_bfm.conduit AlarmClock_inst.leds
+Info: get_instance_interface_property AlarmClock_inst switches CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: switches
+Info: TB_Gen: conduit_end found: switches
+Info: get_instance_interface_property AlarmClock_inst switches CLASS_NAME
+Info: add_instance AlarmClock_inst_switches_bfm altera_conduit_bfm 
+Info: get_instance_property AlarmClock_inst_switches_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value AlarmClock_inst switches associatedClock
+Info: get_instance_interface_parameter_value AlarmClock_inst switches associatedReset
+Info: get_instance_interface_ports AlarmClock_inst switches
+Info: get_instance_interface_port_property AlarmClock_inst switches switches_export ROLE
+Info: get_instance_interface_port_property AlarmClock_inst switches switches_export WIDTH
+Info: get_instance_interface_port_property AlarmClock_inst switches switches_export DIRECTION
+Info: set_instance_parameter_value AlarmClock_inst_switches_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value AlarmClock_inst_switches_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value AlarmClock_inst_switches_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value AlarmClock_inst_switches_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value AlarmClock_inst_switches_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property AlarmClock_inst_switches_bfm CLASS_NAME
+Info: get_instance_interface_property AlarmClock_inst switches CLASS_NAME
+Info: get_instance_interfaces AlarmClock_inst_switches_bfm
+Info: get_instance_interface_property AlarmClock_inst_switches_bfm conduit CLASS_NAME
+Info: add_connection AlarmClock_inst_switches_bfm.conduit AlarmClock_inst.switches
 Info: send_message Info TB_Gen: Saving testbench system: AlarmClock_tb.qsys
 Info: TB_Gen: Saving testbench system: AlarmClock_tb.qsys
 Info: save_system AlarmClock_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb.qsys
+Info: Testbench system: C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb.qsys
 Info: Done
-Info: qsys-generate C:\Users\User\Documents\SO_T1\AlarmClock.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\Users\User\Documents\SO_T1\AlarmClock\testbench\AlarmClock_tb\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock\testbench\AlarmClock_tb\simulation --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading testbench/AlarmClock_tb.qsys
 Progress: Reading input file
 Progress: Adding AlarmClock_inst [AlarmClock 1.0]
 Progress: Parameterizing module AlarmClock_inst
+Progress: Adding AlarmClock_inst_buttons_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module AlarmClock_inst_buttons_bfm
 Progress: Adding AlarmClock_inst_clk_bfm [altera_avalon_clock_source 18.1]
 Progress: Parameterizing module AlarmClock_inst_clk_bfm
-Progress: Adding AlarmClock_inst_inputs_bfm [altera_conduit_bfm 18.1]
-Progress: Parameterizing module AlarmClock_inst_inputs_bfm
 Progress: Adding AlarmClock_inst_leds_bfm [altera_conduit_bfm 18.1]
 Progress: Parameterizing module AlarmClock_inst_leds_bfm
 Progress: Adding AlarmClock_inst_reset_bfm [altera_avalon_reset_source 18.1]
 Progress: Parameterizing module AlarmClock_inst_reset_bfm
+Progress: Adding AlarmClock_inst_switches_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module AlarmClock_inst_switches_bfm
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: AlarmClock_tb.AlarmClock_inst.jtag: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: AlarmClock_tb.AlarmClock_inst.pio_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: AlarmClock_tb.AlarmClock_inst.pio_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: AlarmClock_tb.AlarmClock_inst_clk_bfm: Elaborate: altera_clock_source
 Info: AlarmClock_tb.AlarmClock_inst_clk_bfm:            $Revision: #1 $
 Info: AlarmClock_tb.AlarmClock_inst_clk_bfm:            $Date: 2018/07/18 $
@@ -214,58 +246,62 @@ Info: AlarmClock_tb.AlarmClock_inst_reset_bfm:            $Date: 2018/07/18 $
 Info: AlarmClock_tb.AlarmClock_inst_reset_bfm: Reset is negatively asserted.
 Info: AlarmClock_tb: Generating AlarmClock_tb "AlarmClock_tb" for SIM_VERILOG
 Info: AlarmClock_inst: "AlarmClock_tb" instantiated AlarmClock "AlarmClock_inst"
+Info: AlarmClock_inst_buttons_bfm: "AlarmClock_tb" instantiated altera_conduit_bfm "AlarmClock_inst_buttons_bfm"
 Info: AlarmClock_inst_clk_bfm: "AlarmClock_tb" instantiated altera_avalon_clock_source "AlarmClock_inst_clk_bfm"
-Info: AlarmClock_inst_inputs_bfm: "AlarmClock_tb" instantiated altera_conduit_bfm "AlarmClock_inst_inputs_bfm"
-Info: Reusing file C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/verbosity_pkg.sv
 Info: AlarmClock_inst_leds_bfm: "AlarmClock_tb" instantiated altera_conduit_bfm "AlarmClock_inst_leds_bfm"
-Info: Reusing file C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/verbosity_pkg.sv
 Info: AlarmClock_inst_reset_bfm: "AlarmClock_tb" instantiated altera_avalon_reset_source "AlarmClock_inst_reset_bfm"
-Info: Reusing file C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/verbosity_pkg.sv
 Info: Timer: Starting RTL generation for module 'AlarmClock_Timer'
-Info: Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=AlarmClock_Timer --dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0057_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0057_Timer_gen//AlarmClock_Timer_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0057_Timer_gen/  ]
+Info: Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=AlarmClock_Timer --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0059_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0059_Timer_gen//AlarmClock_Timer_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0059_Timer_gen/  ]
 Info: Timer: Done RTL generation for module 'AlarmClock_Timer'
 Info: Timer: "AlarmClock_inst" instantiated altera_avalon_timer "Timer"
 Info: cpu: "AlarmClock_inst" instantiated altera_nios2_gen2 "cpu"
 Info: jtag: Starting RTL generation for module 'AlarmClock_jtag'
-Info: jtag:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=AlarmClock_jtag --dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0058_jtag_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0058_jtag_gen//AlarmClock_jtag_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0058_jtag_gen/  ]
+Info: jtag:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=AlarmClock_jtag --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0060_jtag_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0060_jtag_gen//AlarmClock_jtag_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0060_jtag_gen/  ]
 Info: jtag: Done RTL generation for module 'AlarmClock_jtag'
 Info: jtag: "AlarmClock_inst" instantiated altera_avalon_jtag_uart "jtag"
 Info: memory: Starting RTL generation for module 'AlarmClock_memory'
-Info: memory:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AlarmClock_memory --dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0059_memory_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0059_memory_gen//AlarmClock_memory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0059_memory_gen/  ]
+Info: memory:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=AlarmClock_memory --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0061_memory_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0061_memory_gen//AlarmClock_memory_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0061_memory_gen/  ]
 Info: memory: Done RTL generation for module 'AlarmClock_memory'
 Info: memory: "AlarmClock_inst" instantiated altera_avalon_onchip_memory2 "memory"
 Info: pio_0: Starting RTL generation for module 'AlarmClock_pio_0'
-Info: pio_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=AlarmClock_pio_0 --dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0060_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0060_pio_0_gen//AlarmClock_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0060_pio_0_gen/  ]
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=AlarmClock_pio_0 --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0062_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0062_pio_0_gen//AlarmClock_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0062_pio_0_gen/  ]
 Info: pio_0: Done RTL generation for module 'AlarmClock_pio_0'
 Info: pio_0: "AlarmClock_inst" instantiated altera_avalon_pio "pio_0"
 Info: pio_1: Starting RTL generation for module 'AlarmClock_pio_1'
-Info: pio_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=AlarmClock_pio_1 --dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0061_pio_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0061_pio_1_gen//AlarmClock_pio_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0061_pio_1_gen/  ]
+Info: pio_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=AlarmClock_pio_1 --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0063_pio_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0063_pio_1_gen//AlarmClock_pio_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0063_pio_1_gen/  ]
 Info: pio_1: Done RTL generation for module 'AlarmClock_pio_1'
 Info: pio_1: "AlarmClock_inst" instantiated altera_avalon_pio "pio_1"
+Info: pio_2: Starting RTL generation for module 'AlarmClock_pio_2'
+Info: pio_2:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=AlarmClock_pio_2 --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0064_pio_2_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0064_pio_2_gen//AlarmClock_pio_2_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0064_pio_2_gen/  ]
+Info: pio_2: Done RTL generation for module 'AlarmClock_pio_2'
+Info: pio_2: "AlarmClock_inst" instantiated altera_avalon_pio "pio_2"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "AlarmClock_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "AlarmClock_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "AlarmClock_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'AlarmClock_cpu_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=AlarmClock_cpu_cpu --dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0064_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0064_cpu_gen//AlarmClock_cpu_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0064_cpu_gen/  ]
-Info: cpu: # 2024.08.19 17:28:35 (*) Starting Nios II generation
-Info: cpu: # 2024.08.19 17:28:35 (*)   Checking for plaintext license.
-Info: cpu: # 2024.08.19 17:28:35 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2024.08.19 17:28:35 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.08.19 17:28:35 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.08.19 17:28:35 (*)   Plaintext license not found.
-Info: cpu: # 2024.08.19 17:28:35 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2024.08.19 17:28:35 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.08.19 17:28:35 (*)   Creating all objects for CPU
-Info: cpu: # 2024.08.19 17:28:36 (*)   Creating 'C:/Users/User/AppData/Local/Temp/alt9954_2448930020716162256.dir/0064_cpu_gen//AlarmClock_cpu_cpu_nios2_waves.do'
-Info: cpu: # 2024.08.19 17:28:36 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.08.19 17:28:36 (*)   Creating plain-text RTL
-Info: cpu: # 2024.08.19 17:28:37 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=AlarmClock_cpu_cpu --dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0067_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0067_cpu_gen//AlarmClock_cpu_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0067_cpu_gen/  ]
+Info: cpu: # 2024.08.20 03:50:39 (*) Starting Nios II generation
+Info: cpu: # 2024.08.20 03:50:39 (*)   Checking for plaintext license.
+Info: cpu: # 2024.08.20 03:50:40 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2024.08.20 03:50:40 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.08.20 03:50:40 (*)   Plaintext license not found.
+Info: cpu: # 2024.08.20 03:50:40 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.08.20 03:50:40 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.08.20 03:50:40 (*)   Creating all objects for CPU
+Info: cpu: # 2024.08.20 03:50:41 (*)   Creating 'C:/Users/Lenovo/AppData/Local/Temp/alt9955_7746620892630504260.dir/0067_cpu_gen//AlarmClock_cpu_cpu_nios2_waves.do'
+Info: cpu: # 2024.08.20 03:50:41 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.08.20 03:50:41 (*)   Creating plain-text RTL
+Info: cpu: # 2024.08.20 03:50:42 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'AlarmClock_cpu_cpu'
 Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
@@ -281,32 +317,32 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info: Reusing file C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/Users/User/Documents/SO_T1/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/AlarmClock_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: AlarmClock_tb: Done "AlarmClock_tb" with 34 modules, 55 files
+Info: AlarmClock_tb: Done "AlarmClock_tb" with 35 modules, 56 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=C:\Users\User\Documents\SO_T1\AlarmClock_tb.spd --output-directory=C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=C:\Users\User\Documents\SO_T1\AlarmClock_tb.spd --output-directory=C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ directory:
+Info: sim-script-gen --spd=C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock_tb.spd --output-directory=C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\Lenovo\OneDrive\Documents\Tarea1_Operativos\T1_SO\AlarmClock_tb.spd --output-directory=C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ directory:
+Info: Generating the following file(s) for VCS simulator in C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ directory:
 Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ directory:
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ directory:
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	33 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in C:/Users/User/Documents/SO_T1/AlarmClock/testbench/ directory:
+Info: 	34 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/User/Documents/SO_T1/AlarmClock/testbench/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Lenovo/OneDrive/Documents/Tarea1_Operativos/T1_SO/AlarmClock/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

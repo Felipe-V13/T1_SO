@@ -4,10 +4,11 @@
 
 `timescale 1 ps / 1 ps
 module AlarmClock (
-		input  wire        clk_clk,       //    clk.clk
-		input  wire [7:0]  inputs_export, // inputs.export
-		output wire [31:0] leds_export,   //   leds.export
-		input  wire        reset_reset_n  //  reset.reset_n
+		input  wire [3:0]  buttons_export,  //  buttons.export
+		input  wire        clk_clk,         //      clk.clk
+		output wire [31:0] leds_export,     //     leds.export
+		input  wire        reset_reset_n,   //    reset.reset_n
+		input  wire [3:0]  switches_export  // switches.export
 	);
 
 	wire  [31:0] cpu_data_master_readdata;                             // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
@@ -54,12 +55,22 @@ module AlarmClock (
 	wire   [1:0] mm_interconnect_0_pio_0_s1_address;                   // mm_interconnect_0:pio_0_s1_address -> pio_0:address
 	wire         mm_interconnect_0_pio_0_s1_write;                     // mm_interconnect_0:pio_0_s1_write -> pio_0:write_n
 	wire  [31:0] mm_interconnect_0_pio_0_s1_writedata;                 // mm_interconnect_0:pio_0_s1_writedata -> pio_0:writedata
+	wire         mm_interconnect_0_pio_1_s1_chipselect;                // mm_interconnect_0:pio_1_s1_chipselect -> pio_1:chipselect
 	wire  [31:0] mm_interconnect_0_pio_1_s1_readdata;                  // pio_1:readdata -> mm_interconnect_0:pio_1_s1_readdata
 	wire   [1:0] mm_interconnect_0_pio_1_s1_address;                   // mm_interconnect_0:pio_1_s1_address -> pio_1:address
+	wire         mm_interconnect_0_pio_1_s1_write;                     // mm_interconnect_0:pio_1_s1_write -> pio_1:write_n
+	wire  [31:0] mm_interconnect_0_pio_1_s1_writedata;                 // mm_interconnect_0:pio_1_s1_writedata -> pio_1:writedata
+	wire         mm_interconnect_0_pio_2_s1_chipselect;                // mm_interconnect_0:pio_2_s1_chipselect -> pio_2:chipselect
+	wire  [31:0] mm_interconnect_0_pio_2_s1_readdata;                  // pio_2:readdata -> mm_interconnect_0:pio_2_s1_readdata
+	wire   [1:0] mm_interconnect_0_pio_2_s1_address;                   // mm_interconnect_0:pio_2_s1_address -> pio_2:address
+	wire         mm_interconnect_0_pio_2_s1_write;                     // mm_interconnect_0:pio_2_s1_write -> pio_2:write_n
+	wire  [31:0] mm_interconnect_0_pio_2_s1_writedata;                 // mm_interconnect_0:pio_2_s1_writedata -> pio_2:writedata
 	wire         irq_mapper_receiver0_irq;                             // Timer:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                             // jtag:av_irq -> irq_mapper:receiver1_irq
+	wire         irq_mapper_receiver2_irq;                             // pio_1:irq -> irq_mapper:receiver2_irq
+	wire         irq_mapper_receiver3_irq;                             // pio_2:irq -> irq_mapper:receiver3_irq
 	wire  [31:0] cpu_irq_irq;                                          // irq_mapper:sender_irq -> cpu:irq
-	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [Timer:reset_n, cpu:reset_n, irq_mapper:reset, jtag:rst_n, memory:reset, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, pio_0:reset_n, pio_1:reset_n, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [Timer:reset_n, cpu:reset_n, irq_mapper:reset, jtag:rst_n, memory:reset, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, pio_0:reset_n, pio_1:reset_n, pio_2:reset_n, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                   // rst_controller:reset_req -> [cpu:reset_req, memory:reset_req, rst_translator:reset_req_in]
 
 	AlarmClock_Timer timer (
@@ -141,11 +152,27 @@ module AlarmClock (
 	);
 
 	AlarmClock_pio_1 pio_1 (
-		.clk      (clk_clk),                             //                 clk.clk
-		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
-		.address  (mm_interconnect_0_pio_1_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_0_pio_1_s1_readdata), //                    .readdata
-		.in_port  (inputs_export)                        // external_connection.export
+		.clk        (clk_clk),                               //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
+		.address    (mm_interconnect_0_pio_1_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_pio_1_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_pio_1_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_pio_1_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_pio_1_s1_readdata),   //                    .readdata
+		.in_port    (buttons_export),                        // external_connection.export
+		.irq        (irq_mapper_receiver2_irq)               //                 irq.irq
+	);
+
+	AlarmClock_pio_2 pio_2 (
+		.clk        (clk_clk),                               //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
+		.address    (mm_interconnect_0_pio_2_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_pio_2_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_pio_2_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_pio_2_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_pio_2_s1_readdata),   //                    .readdata
+		.in_port    (switches_export),                       // external_connection.export
+		.irq        (irq_mapper_receiver3_irq)               //                 irq.irq
 	);
 
 	AlarmClock_mm_interconnect_0 mm_interconnect_0 (
@@ -191,7 +218,15 @@ module AlarmClock (
 		.pio_0_s1_writedata                    (mm_interconnect_0_pio_0_s1_writedata),                 //                                .writedata
 		.pio_0_s1_chipselect                   (mm_interconnect_0_pio_0_s1_chipselect),                //                                .chipselect
 		.pio_1_s1_address                      (mm_interconnect_0_pio_1_s1_address),                   //                        pio_1_s1.address
+		.pio_1_s1_write                        (mm_interconnect_0_pio_1_s1_write),                     //                                .write
 		.pio_1_s1_readdata                     (mm_interconnect_0_pio_1_s1_readdata),                  //                                .readdata
+		.pio_1_s1_writedata                    (mm_interconnect_0_pio_1_s1_writedata),                 //                                .writedata
+		.pio_1_s1_chipselect                   (mm_interconnect_0_pio_1_s1_chipselect),                //                                .chipselect
+		.pio_2_s1_address                      (mm_interconnect_0_pio_2_s1_address),                   //                        pio_2_s1.address
+		.pio_2_s1_write                        (mm_interconnect_0_pio_2_s1_write),                     //                                .write
+		.pio_2_s1_readdata                     (mm_interconnect_0_pio_2_s1_readdata),                  //                                .readdata
+		.pio_2_s1_writedata                    (mm_interconnect_0_pio_2_s1_writedata),                 //                                .writedata
+		.pio_2_s1_chipselect                   (mm_interconnect_0_pio_2_s1_chipselect),                //                                .chipselect
 		.Timer_s1_address                      (mm_interconnect_0_timer_s1_address),                   //                        Timer_s1.address
 		.Timer_s1_write                        (mm_interconnect_0_timer_s1_write),                     //                                .write
 		.Timer_s1_readdata                     (mm_interconnect_0_timer_s1_readdata),                  //                                .readdata
@@ -204,6 +239,8 @@ module AlarmClock (
 		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
 		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
+		.receiver2_irq (irq_mapper_receiver2_irq),       // receiver2.irq
+		.receiver3_irq (irq_mapper_receiver3_irq),       // receiver3.irq
 		.sender_irq    (cpu_irq_irq)                     //    sender.irq
 	);
 

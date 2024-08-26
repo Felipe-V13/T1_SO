@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'AlarmClock'
  * SOPC Builder design path: ../../AlarmClock.sopcinfo
  *
- * Generated: Mon Aug 19 17:35:28 CST 2024
+ * Generated: Tue Aug 20 04:17:31 CST 2024
  */
 
 /*

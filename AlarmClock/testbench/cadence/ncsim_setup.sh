@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2024.08.19.17:28:38
+# ACDS 18.1 625 win32 2024.08.20.03:50:44
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2024.08.19.17:28:38
+# ACDS 18.1 625 win32 2024.08.20.03:50:44
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="AlarmClock_tb"
@@ -169,6 +169,7 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
+mkdir -p ./libraries/pio_2/
 mkdir -p ./libraries/pio_1/
 mkdir -p ./libraries/pio_0/
 mkdir -p ./libraries/memory/
@@ -176,8 +177,8 @@ mkdir -p ./libraries/jtag/
 mkdir -p ./libraries/Timer/
 mkdir -p ./libraries/AlarmClock_inst_reset_bfm/
 mkdir -p ./libraries/AlarmClock_inst_leds_bfm/
-mkdir -p ./libraries/AlarmClock_inst_inputs_bfm/
 mkdir -p ./libraries/AlarmClock_inst_clk_bfm/
+mkdir -p ./libraries/AlarmClock_inst_buttons_bfm/
 mkdir -p ./libraries/AlarmClock_inst/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
@@ -256,6 +257,7 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/altera_reset_synchronizer.v"                                       -work rst_controller                        -cdslib ./cds_libs/rst_controller.cds.lib                       
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_irq_mapper.sv"                                          -work irq_mapper                            -cdslib ./cds_libs/irq_mapper.cds.lib                           
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_mm_interconnect_0.v"                                    -work mm_interconnect_0                     -cdslib ./cds_libs/mm_interconnect_0.cds.lib                    
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_pio_2.v"                                                -work pio_2                                 -cdslib ./cds_libs/pio_2.cds.lib                                
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_pio_1.v"                                                -work pio_1                                 -cdslib ./cds_libs/pio_1.cds.lib                                
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_pio_0.v"                                                -work pio_0                                 -cdslib ./cds_libs/pio_0.cds.lib                                
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_memory.v"                                               -work memory                                -cdslib ./cds_libs/memory.cds.lib                               
@@ -264,8 +266,8 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock_Timer.v"                                                -work Timer                                 -cdslib ./cds_libs/Timer.cds.lib                                
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/altera_avalon_reset_source.sv"                                     -work AlarmClock_inst_reset_bfm             -cdslib ./cds_libs/AlarmClock_inst_reset_bfm.cds.lib            
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                        -work AlarmClock_inst_leds_bfm              -cdslib ./cds_libs/AlarmClock_inst_leds_bfm.cds.lib             
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/altera_conduit_bfm.sv"                                             -work AlarmClock_inst_inputs_bfm            -cdslib ./cds_libs/AlarmClock_inst_inputs_bfm.cds.lib           
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/altera_avalon_clock_source.sv"                                     -work AlarmClock_inst_clk_bfm               -cdslib ./cds_libs/AlarmClock_inst_clk_bfm.cds.lib              
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/altera_conduit_bfm.sv"                                             -work AlarmClock_inst_buttons_bfm           -cdslib ./cds_libs/AlarmClock_inst_buttons_bfm.cds.lib          
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/submodules/AlarmClock.v"                                                      -work AlarmClock_inst                       -cdslib ./cds_libs/AlarmClock_inst.cds.lib                      
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/AlarmClock_tb/simulation/AlarmClock_tb.v"                                                                                                                                                                          
 fi

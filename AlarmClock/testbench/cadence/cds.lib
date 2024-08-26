@@ -32,6 +32,7 @@ DEFINE cpu                                   ./libraries/cpu/
 DEFINE rst_controller                        ./libraries/rst_controller/                       
 DEFINE irq_mapper                            ./libraries/irq_mapper/                           
 DEFINE mm_interconnect_0                     ./libraries/mm_interconnect_0/                    
+DEFINE pio_2                                 ./libraries/pio_2/                                
 DEFINE pio_1                                 ./libraries/pio_1/                                
 DEFINE pio_0                                 ./libraries/pio_0/                                
 DEFINE memory                                ./libraries/memory/                               
@@ -39,8 +40,8 @@ DEFINE jtag                                  ./libraries/jtag/
 DEFINE Timer                                 ./libraries/Timer/                                
 DEFINE AlarmClock_inst_reset_bfm             ./libraries/AlarmClock_inst_reset_bfm/            
 DEFINE AlarmClock_inst_leds_bfm              ./libraries/AlarmClock_inst_leds_bfm/             
-DEFINE AlarmClock_inst_inputs_bfm            ./libraries/AlarmClock_inst_inputs_bfm/           
 DEFINE AlarmClock_inst_clk_bfm               ./libraries/AlarmClock_inst_clk_bfm/              
+DEFINE AlarmClock_inst_buttons_bfm           ./libraries/AlarmClock_inst_buttons_bfm/          
 DEFINE AlarmClock_inst                       ./libraries/AlarmClock_inst/                      
 DEFINE altera_ver                            ./libraries/altera_ver/                           
 DEFINE lpm_ver                               ./libraries/lpm_ver/                              

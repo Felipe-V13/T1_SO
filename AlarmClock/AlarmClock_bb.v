@@ -1,12 +1,14 @@
 
 module AlarmClock (
+	buttons_export,
 	clk_clk,
-	inputs_export,
 	leds_export,
-	reset_reset_n);	
+	reset_reset_n,
+	switches_export);	
 
+	input	[3:0]	buttons_export;
 	input		clk_clk;
-	input	[7:0]	inputs_export;
 	output	[31:0]	leds_export;
 	input		reset_reset_n;
+	input	[3:0]	switches_export;
 endmodule

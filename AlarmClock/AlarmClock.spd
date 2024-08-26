@@ -177,6 +177,10 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
+   path="simulation/submodules/AlarmClock_pio_2.v"
+   type="VERILOG"
+   library="pio_2" />
+ <file
    path="simulation/submodules/AlarmClock_pio_1.v"
    type="VERILOG"
    library="pio_1" />
